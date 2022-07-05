@@ -1,0 +1,255 @@
+:root {
+  --primary-color: #53e621;
+  --secondary-color: #5cbc39;
+  --text-capitalize: capitalize;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+/* ///////////////
+styling the header  logo  and nav
+/////////////////*/
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  background-color: white;
+}
+
+.nav-logo > i {
+  color: var(--primary-color);
+  font-size: 1.8em;
+  margin-right: 3px;
+}
+.nav-logo span:first-of-type {
+  font-size: 2em;
+  color: tomato;
+}
+
+span:last-of-type {
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+/*/////////////////
+STYLING THE MENU LINKS
+////////////////// */
+
+.nav-links a {
+  color: rgb(48, 47, 47);
+  text-decoration: none;
+  font-size: 17px;
+  margin-right: 15px;
+}
+
+.nav-links > button,
+.mn-con button {
+  background-color: var(--primary-color);
+  font-size: 1.1em;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.nav-links > a:hover {
+  font-size: 1.8em;
+  border-bottom: 2px solid var(--primary-color);
+  border-right: 2px solid var(--primary-color);
+  padding: 5px;
+}
+
+ button:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 1s;
+}
+
+/* ///////////////
+styling the main 
+/////////////////*/
+
+.mn-con {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 50px 100px;
+}
+
+.mn-content {
+  width: 40%;
+  height: 680px;
+}
+.mn-image {
+  width: 60%;
+  height: 680px;
+}
+
+.mn-image > img {
+  width: 100%;
+  height: 75%;
+  margin-left: 40px;
+}
+
+.mn-con h1 {
+  font-size: 3.45em;
+  font-family: sans-serif;
+}
+.mn-con p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+.menu-bar {
+  display: none;
+}
+
+#close{
+  display: none;
+}
+
+/* RESPONSIVE MOBILE */
+
+@media screen and (max-width: 758px) {
+  .nav-bar {
+    padding: 20px 30px;
+  }
+
+  .menu-bar {
+    display: block;
+    color: var(--primary-color);
+    font-size: 30px;
+  }
+  /* NAV END HERE */
+
+  .mn-con {
+    flex-direction: column;
+    padding: 50px 20px;
+  }
+
+  .mn-content {
+    width: 100%;
+    height: 500px;
+  }
+  .mn-image {
+    box-sizing: border-box;
+    border: 2px solid var(--primary-color);
+    width: 100%;
+    height: 200px;
+  }
+
+  .mn-image > img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .mn-con h1 {
+    font-size: 35px;
+  }
+  .mn-con h1 span {
+    display: block;
+  }
+  .mn-con p {
+    font-size: 18px;
+  }
+  /* MAIN END HERE */
+
+  .nav-links {
+    display: none;
+  }
+  .nav-links{
+    background-color: var(--primary-color);
+    padding: 50px;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 250px;
+    height: 500px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    
+
+  }
+  .nav-links a{
+    display: block;
+    margin-bottom: 60px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  .nav-links a:hover{
+     font-size: 25px;
+  }
+
+  .nav-links button{
+    background-color: white;
+    color: var(--primary-color);
+    margin-left: 70px;
+    padding: 10px 40px;
+  }
+  
+  .nav-links button:hover{
+    background-color:var(--secondary-color);
+    color: white;
+    padding: 10px 40px;
+  }
+#close{
+    display: block;
+    background-color: white;
+    color: var(--primary-color);
+    margin-left: 70px;
+    margin-top: 30px;
+    bottom: 10px;
+}
+  /* nav  mobile menu click end here */
+}
+
+/* RESPONSIVE TABLET */
+@media screen and (min-width: 759px) and (max-width: 1140px) {
+  .nav-bar {
+    padding: 20px 50px;
+  }
+
+  .mn-con {
+    flex-direction: flex;
+    justify-content: space-between;
+    padding: 50px 50px;
+  }
+
+  .mn-content {
+    width: 60%;
+    height: 500px;
+  }
+  .mn-image {
+    border: 2px solid var(--primary-color);
+    width: 40%;
+    height: 200px;
+    margin: 0 10px;
+  }
+
+  .mn-image > img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .mn-con h1 {
+    font-size: 45px;
+  }
+  .mn-con h1 span {
+    display: block;
+  }
+  .mn-con p {
+    font-size: 20px;
+  }
+}
